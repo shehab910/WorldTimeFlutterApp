@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:world_time/services/world_time.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+
 class Loading extends StatefulWidget {
   @override
   _LoadingState createState() => _LoadingState();
@@ -21,16 +23,19 @@ class _LoadingState extends State<Loading> {
   void initState() {
     super.initState();
     setupWorldTime();
-
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(50.0),
-        child: Text('Loading..'),
-      ),
+      backgroundColor: Colors.blue[900],
+      body: Center(
+        child: SpinKitPouringHourglass(
+          color: Colors.grey[300],
+          size: 70.0,
+          duration: const Duration(milliseconds: 700,),
+        ),
+      )
     );
   }
 }
