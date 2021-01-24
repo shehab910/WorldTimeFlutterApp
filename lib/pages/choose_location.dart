@@ -11,7 +11,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
     return Scaffold(
       body: Text("choose location"),
       appBar: AppBar(
-        backgroundColor: Colors.blue[900],
+        backgroundColor: Colors.grey[600],
         centerTitle: true,
         elevation: 0,
         title: Text('Choose Location'),

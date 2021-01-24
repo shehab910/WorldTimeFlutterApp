@@ -15,7 +15,8 @@ class _LoadingState extends State<Loading> {
     Navigator.pushReplacementNamed(context, '/home', arguments: {
       'location' : worldTime.location,
       'flag' : worldTime.flag,
-      'time' : worldTime.time
+      'time' : worldTime.time,
+      'isDayTime' : worldTime.isDayTime
     }); //the third parameter to share data between screens
   }
 
@@ -28,10 +29,10 @@ class _LoadingState extends State<Loading> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[900],
+      backgroundColor: Colors.grey[600],
       body: Center(
         child: SpinKitPouringHourglass(
-          color: Colors.grey[300],
+          color: Colors.white,
           size: 70.0,
           duration: const Duration(milliseconds: 700,),
         ),
