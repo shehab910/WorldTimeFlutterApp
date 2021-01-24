@@ -17,7 +17,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.fromLTRB(0, 120.0, 0, 0),
           child: Column(
             children: [
               FlatButton.icon(
@@ -26,6 +26,27 @@ class _HomeState extends State<Home> {
                   },
                   icon: Icon(Icons.edit_location_rounded),
                   label: Text('Change Location'),
+              ),
+              SizedBox(height: 20.0,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    data['location'],
+                    style: TextStyle(
+                      letterSpacing: 2.0,
+                      fontSize: 29.0,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 20.0,),
+              Text(
+                data['time'],
+                style: TextStyle(
+                  fontSize: 65.0,
+
+                ),
               ),
             ],
           ),
