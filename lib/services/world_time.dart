@@ -22,7 +22,7 @@ class WorldTime {
 
       //getting the needed data
       String datetime = timeData['datetime'];
-      String offset = timeData['utc_offset'].substring(1, 3);
+      String offset = timeData['utc_offset'].substring(0, 3);
 
       DateTime now = DateTime.parse(datetime);
       now = now.add(Duration(hours: int.parse(offset)));
